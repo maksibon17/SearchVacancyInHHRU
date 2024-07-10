@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SearchVacancyInHHRU.App">
+    <Application.Resources>
+        <!-- Стиль для кнопок -->
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="#2196F3" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="CornerRadius" Value="8" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="Padding" Value="12,6" />
+            <Setter Property="Margin" Value="0,10,0,0" />
+            <!-- Другие свойства стиля кнопок, если нужно -->
+        </Style>
+
+        <!-- Стиль для меток -->
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="#212121" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="Margin" Value="0,5,0,5" />
+            <!-- Другие свойства стиля меток, если нужно -->
+        </Style>
+
+        <!-- Стиль для ввода -->
+        <Style TargetType="Entry">
+            <Setter Property="BackgroundColor" Value="#F5F5F5" />
+            <Setter Property="TextColor" Value="#212121" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="HeightRequest" Value="48" />
+            <Setter Property="Margin" Value="0,0,0,10" />
+         <!-- Другие свойства стиля ввода, если нужно -->
+        </Style>
+
+        <!-- Стиль для страниц -->
+        <Style TargetType="ContentPage">
+            <Setter Property="BackgroundColor" Value="#FFFFFF" />
+            <Setter Property="Padding" Value="20" />
+            <!-- Другие свойства стиля страниц, если нужно -->
+        </Style>
+
+        <!-- Стиль для ListView -->
+        <Style TargetType="ListView">
+            <Setter Property="Margin" Value="0,10,0,10" />
+            <Setter Property="SeparatorVisibility" Value="None" />
+            <!-- Другие свойства стиля ListView, если нужно -->
+        </Style>
+    </Application.Resources>
+</Application>

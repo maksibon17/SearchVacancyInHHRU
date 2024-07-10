@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SearchVacancyInHHRU.MainPage">
+
+    <StackLayout Padding="10">
+        <!-- Ввод и кнопка поиска -->
+        <Label Text="Введите нужную Вам технологию" HorizontalOptions="Center" Margin="0,10,0,0"/>
+        <Entry Placeholder="Пример: Word, Высшее образование"
+               Text="{Binding TextInput}" 
+               Margin="0,0,0,10" 
+               HeightRequest="40"/>
+        <Button Text="Поиск" Command="{Binding SearchCommand}" WidthRequest="230"/>
+
+        <!-- Информационные метки -->
+        <StackLayout Margin="10" BackgroundColor="AliceBlue">
+            <Button Text="Перейти к вакансии"
+                Command="{Binding OpenVacancyCommand}"
+                IsVisible="{Binding IsButtonVisible}"/>
+            <Label Text="{Binding LabelForInputText}" Margin="5"/>
+            <Label Text="{Binding LabelForCountFoundVacancies}" Margin="5"/>
+            <Label Text="{Binding LabelHowToOpenVacancy}" Margin="5"/>
+            
+        </StackLayout>
+
+        <!-- Список вакансий -->
+
+        <StackLayout BackgroundColor="AntiqueWhite">
+            <Label Text="Список Вакансий с указанной технологией"
+                HorizontalOptions="Center" 
+                VerticalOptions="Start" 
+                Margin="0,10,0,0"
+                FontAttributes="Italic"
+                />
+
+            <Label Text="{Binding LabelForEmptyList}" 
+                HorizontalOptions="Center" 
+                VerticalOptions="Center"
+                FontSize="20"
+                TextColor="Red"
+                FontAttributes="Bold"
+                Margin="0,10,0,0"/>
+
+
+            <ListView ItemsSource="{Binding MatchingVacancies}"
+                  SelectedItem="{Binding SelectedVacancy}"
+                  Margin="5,1,5,1">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Name}" TextColor="Black"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+            
+        </StackLayout>
+        <Label Text="©Гришин Максим" 
+               HorizontalOptions="Center" 
+               Margin="0,1,0,0"
+               FontAttributes="Bold"
+               FontSize="25"/>
+    </StackLayout>
+    
+
+</ContentPage>
